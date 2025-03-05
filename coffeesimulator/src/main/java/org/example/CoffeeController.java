@@ -14,7 +14,7 @@ public class CoffeeController {
     public void run() {
         view.displayWelcome();
         int mainChoice = view.getMainChoice();
-        if (mainChoice == 2) return;  // Quitter
+        if (mainChoice == 2) return;
 
         Coffee coffee = selectCoffee();
 

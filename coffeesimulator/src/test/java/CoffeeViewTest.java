@@ -34,7 +34,7 @@ public class CoffeeViewTest {
         coffeeView.displayWelcome();
 
         String expectedOutput = "Bienvenue dans le simulateur de café!\n1. Passer une commande\n2. Quitter\n";
-        assertEquals(expectedOutput, outContent.toString());
+        assertEquals(expectedOutput, outContent.toString(), "Les phrases ne correspondent pas");
     }
 
     @Test
@@ -72,7 +72,8 @@ public class CoffeeViewTest {
         coffeeView.displaySummary(coffee);
 
         String expectedOutput = "Commande: Espresso\nTotal: 2.0€\nConfirmer? 1. Oui 2. Non\n";
-        assertTrue(outContent.toString().contains(expectedOutput));
+
+        assertEquals(expectedOutput, outContent.toString(), "Les phrases ne correspondent pas");
     }
 
     @Test

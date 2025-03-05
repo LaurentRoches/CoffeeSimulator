@@ -10,8 +10,8 @@ public class CoffeeView {
     }
 
     public void displayWelcome() {
-        System.out.println("Bienvenue dans le simulateur de café!");
-        System.out.println("1. Passer une commande\n2. Quitter");
+        System.out.print("Bienvenue dans le simulateur de café!\n");
+        System.out.print("1. Passer une commande\n2. Quitter\n");
     }
 
     public int getMainChoice() {
@@ -34,10 +34,11 @@ public class CoffeeView {
     }
 
     public void displaySummary(Coffee coffee) {
-        System.out.println("Commande: " + coffee.getDescription());
-        System.out.println("Total: " + coffee.getCost() + "€");
-        System.out.println("Confirmer? 1. Oui 2. Non");
+        System.out.print("Commande: " + coffee.getDescription() + "\n");
+        System.out.print("Total: " + coffee.getCost() + "€\n");
+        System.out.print("Confirmer? 1. Oui 2. Non\n");
     }
+
 
     public boolean confirmOrder() {
         int choice = scanner.nextInt();
